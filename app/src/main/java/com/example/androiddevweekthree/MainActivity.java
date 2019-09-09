@@ -1,6 +1,7 @@
 package com.example.androiddevweekthree;
 
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
         //Set view/text
         tvId.setText( "Todo at "+ currentDateandTime.toString());
+
+        EditText simpleEditText = (EditText) findViewById(R.id.et_simple);
+        String strValue = simpleEditText.getText().toString();
+
+
     }
 
     @Override
