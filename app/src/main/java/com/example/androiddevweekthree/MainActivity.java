@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         EditText simpleEditText = (EditText) findViewById(R.id.et_simple);
         String strValue = simpleEditText.getText().toString();
 
+        simpleEditText.setText(open("data.txt"));
+
+
 
     }
 
@@ -54,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        EditText edit = (EditText)findViewById(R.id.et_simple);
+        String text = edit.getText().toString();
+        save("data.txt", text);
     }
 
     /** Writes textToSave to the file denoted by fileName. **/
